@@ -18,7 +18,7 @@ class ControllerPosts extends Controller
     {
         $postsRepository = new PostRepository();
         $result = $id > 0 ? $postsRepository->getOne($id) : $postsRepository->getAll();
-        die(json_encode($result));
+        $this->jsonResponse($result);
     }
 
     function createAction()
@@ -30,11 +30,11 @@ class ControllerPosts extends Controller
                 if (empty($_POST[$requiredField])) throw new \Exception('Missed field "' . $requiredField . '"');
             }
         } catch (\Exception $e) {
-            die(json_encode(array(
+            $this->jsonResponse(array(
                 'error' => true,
                 'message' => $e->getMessage(),
                 'code' => 400
-            )));
+            ));
         }
 
         $postRepository = new PostRepository();

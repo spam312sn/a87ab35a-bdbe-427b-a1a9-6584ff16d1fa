@@ -15,7 +15,6 @@ class ControllerError extends Controller
      */
     function getAction($code)
     {
-        $answer = json_encode(array('error' => true, 'code' => $code));
-        die($answer);
+        $this->jsonResponse(array('error' => true, 'code' => $code));
     }
 }

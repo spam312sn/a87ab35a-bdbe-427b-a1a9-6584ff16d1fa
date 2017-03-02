@@ -16,6 +16,6 @@ class ControllerUsers extends Controller
     {
         $userRepository = new UserRepository();
         $result = $id > 0 ? $userRepository->getOne($id) : $userRepository->getAll();
-        die(json_encode($result));
+        $this->jsonResponse($result);
     }
 }

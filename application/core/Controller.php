@@ -8,7 +8,7 @@ use ReflectionMethod;
  * Class Controller
  * @package application\core
  */
-class Controller
+class Controller extends Response
 {
     /**
      * @param string $needle
