@@ -43,4 +43,10 @@ __Database structure:__
 
 ```bash
 $ composer install
+$ sudo chmod -R 777 var/cache/
+$ sudo chmod -R 777 var/logs/
+$ sudo chmod -R 777 var/sessions/
+$ cp app/config/parameters.yml.dist app/config/parameters.yml
+$ php bin/console doctrine:database:create
+$ php bin/console doctrine:migrations:migrate
 ```
