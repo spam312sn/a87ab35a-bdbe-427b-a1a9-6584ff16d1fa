@@ -11,6 +11,9 @@ use application\repository\PostRepository;
  */
 class ControllerPosts extends Controller
 {
+    /**
+     * @param int $id
+     */
     function getAction($id = 0)
     {
         $postsRepository = new PostRepository();
@@ -36,5 +39,16 @@ class ControllerPosts extends Controller
 
         $postRepository = new PostRepository();
         $postRepository->create($_POST);
+    }
+
+    /**
+     * @param int $id
+     */
+    function deleteAction($id = 0)
+    {
+        if ($id > 0) {
+            $postRepository = new PostRepository();
+            $postRepository->delete($id);
+        }
     }
 }
