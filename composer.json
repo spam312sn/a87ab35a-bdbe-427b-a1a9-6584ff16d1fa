@@ -1,0 +1,24 @@
+{
+  "name": "spam312sn/a87ab35a-bdbe-427b-a1a9-6584ff16d1fa",
+  "description": "Test work",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Serghei Niculaev",
+      "email": "spam312sn@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-0": {
+      "application": "application/"
+    },
+    "classmap": [
+      "application/"
+    ],
+    "files": [
+      "application/bootstrap.php"
+    ]
+  },
+  "minimum-stability": "stable"
+}
