@@ -1,0 +1,11 @@
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: a87ab35a-bdbe-427b-a1a9-6584ff16d1fa
+    database_user: root
+    database_password: root
+    mailer_transport: null
+    mailer_host: null
+    mailer_user: null
+    mailer_password: null
+    secret: token

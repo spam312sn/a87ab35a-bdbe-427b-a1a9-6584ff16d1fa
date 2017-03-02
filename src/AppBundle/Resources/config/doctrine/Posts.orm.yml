@@ -1,0 +1,24 @@
+AppBundle\Entity\Posts:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\PostsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        userId:
+            type: integer
+        post:
+            type: text
+        createdAt:
+            type: datetime
+        deleted:
+            type: boolean
+            default: '0'
+        deletedAt:
+            type: datetime
+            nullable: true
+    lifecycleCallbacks: {  }
