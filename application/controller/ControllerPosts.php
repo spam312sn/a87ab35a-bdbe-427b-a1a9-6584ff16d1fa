@@ -25,7 +25,7 @@ class ControllerPosts extends Controller
     {
         try {
             if (empty($_POST)) throw new \Exception('Empty data');
-            $requiredFields = ['post', 'user_id'];
+            $requiredFields = ['post'];
             foreach ($requiredFields as $requiredField) {
                 if (empty($_POST[$requiredField])) throw new \Exception('Missed field "' . $requiredField . '"');
             }
